@@ -1,0 +1,21 @@
+[sqruff]
+dialect = postgres
+
+[sqruff:indentation]
+indent_unit = space
+tab_space_size = 4
+indented_ctes = True
+indented_using_on = True
+indented_on_contents = True
+indented_then = True
+indented_then_contents = True
+allow_implicit_indents = True
+skip_indentation_in = 
+template_blocks_indent = True
+
+[sqruff:layout:type:alias_expression]
+spacing_before = align
+align_within = select_clause
+align_scope = bracketed
+
+# vi:ft=ini
