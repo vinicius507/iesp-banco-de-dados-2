@@ -5,51 +5,51 @@
 -- Vinícius Gonçalves de Oliveira
 
 SELECT
-    p.id   AS paciente_id,
-    p.nome AS nome_id,
-    c.id   AS convenio_id,
-    c.nome AS convenio
+	p.id   AS paciente_id,
+	p.nome AS nome_id,
+	c.id   AS convenio_id,
+	c.nome AS convenio
 FROM
-    pacientes p
+	pacientes p
 INNER JOIN convenios c ON c.id = p.convenio_id
 ORDER BY p.id;
 
 SELECT
-    p.id   AS paciente_id,
-    p.nome AS nome_id,
-    c.id   AS convenio_id,
-    c.nome AS convenio
+	p.id   AS paciente_id,
+	p.nome AS nome_id,
+	c.id   AS convenio_id,
+	c.nome AS convenio
 FROM
-    pacientes p
+	pacientes p
 LEFT JOIN convenios c ON c.id = p.convenio_id
 ORDER BY p.id;
 
 SELECT
-    p.id   AS paciente_id,
-    p.nome AS nome_id,
-    c.id   AS convenio_id,
-    c.nome AS convenio
+	p.id   AS paciente_id,
+	p.nome AS nome_id,
+	c.id   AS convenio_id,
+	c.nome AS convenio
 FROM
-    pacientes p
+	pacientes p
 RIGHT JOIN convenios c ON c.id = p.convenio_id
 ORDER BY p.id;
 
 SELECT
-    p.id   AS paciente_id,
-    p.nome AS nome_id,
-    c.id   AS convenio_id,
-    c.nome AS convenio
+	p.id   AS paciente_id,
+	p.nome AS nome_id,
+	c.id   AS convenio_id,
+	c.nome AS convenio
 FROM
-    pacientes p
+	pacientes p
 FULL JOIN convenios c ON c.id = p.convenio_id
 ORDER BY p.id;
 
 SELECT
-    p.id   AS paciente_id,
-    p.nome AS nome_id,
-    c.id   AS convenio_id,
-    c.nome AS convenio
+	p.id   AS paciente_id,
+	p.nome AS nome_id,
+	c.id   AS convenio_id,
+	c.nome AS convenio
 FROM
-    pacientes p
+	pacientes p
 CROSS JOIN convenios c
 ORDER BY p.id;
