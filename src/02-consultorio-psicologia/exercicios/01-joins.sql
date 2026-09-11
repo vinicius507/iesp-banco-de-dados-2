@@ -18,7 +18,7 @@ SELECT s.* FROM
 SELECT
 	p.id,
 	p.nome,
-	sum(s.valor) AS valor_total
+	coalesce(sum(s.valor), 0) AS valor_total
 FROM pacientes p
-INNER JOIN sessoes s ON s.paciente_id = p.id
+LEFT JOIN sessoes s ON s.paciente_id = p.id
 GROUP BY p.id;
